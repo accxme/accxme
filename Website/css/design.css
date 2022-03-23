@@ -2263,8 +2263,13 @@ td , th{
 
 }
 tr:hover {
-	background-color: orange;
+	background-color: rgb(46, 46, 45);
 }
+
+.lea:hover{
+	background-color: #870018;
+}
+
 th{
  background-color: #870018;
  color: #fafafa;
