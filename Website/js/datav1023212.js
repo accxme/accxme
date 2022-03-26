@@ -1,6 +1,6 @@
 // fucntion fetch the data and return it
 (async function leaderboard() {
-    const response = await fetch('https://api.wls.gg/v5/leaderboards/0-0000-293320262789640192?page=0')
+    const response = await fetch('https://api.wls.gg/v5/leaderboards/0-0000-293673724056449024?page=0')
     const data = response.json()
 
 
