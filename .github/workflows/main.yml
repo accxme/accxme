@@ -1,7 +1,0 @@
- name: Discord Commits
-        uses: Sniddl/discord-commits@v1.3
-        with:
-          webhook: ${{ https://discord.com/api/webhooks/957498532733005834/7Wu1cJ9_IH0GKehDv7ABgwtSl4NxggOoSNjZc7nCN2ANcclfqDuEGDs1hLoEORQB61D2 }}
-          message: "Successful commit to **{{ github.context.payload.repository.owner.name }}/{{ github.context.payload.repository.name}}**.\nDiff: {{ github.context.payload.compare }}"
-          embed: '{ "title": "{{ commit.title }}", "description": "{{ commit.description }}", "url": "{{ commit.url }}", "author": { "name": "{{ commit.author.name }} ({{ commit.author.username }})", "icon_url": "https://avatars.io/gravatar/{{ commit.author.email }}"} }'
-          last-commit-only: false
