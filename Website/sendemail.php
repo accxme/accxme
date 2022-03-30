@@ -15,7 +15,7 @@ $message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subj
 if ( $senderName && $senderEmail && $message) {
   $recipient = RECIPIENT_NAME . " <" . RECIPIENT_EMAIL . ">";
   $headers = "From: " . $senderName . "";
-  $msgBody = " Email:". $senderEmail . "Message: " . $message . "";
+  $msgBody = " Email: ". $senderEmail . "Message: " . $message . "";
   $success = mail( $recipient, $headers, $msgBody );
 
   //Set Location After Successsfull Submission
