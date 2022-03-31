@@ -1,6 +1,6 @@
 // fucntion fetch the data and return it
 (async function leaderboard() {
-    const response = await fetch('https://api.wls.gg/v5/leaderboards/0-0000-293673724056449024?page=0')
+    const response = await fetch('https://api.wls.gg/v5/leaderboards/0-0000-293674381136113664?page=0')
     const data = response.json()
 
 
@@ -70,7 +70,7 @@
 })()
 
  // Set the date we're counting down to
- var countDownDate = new Date("MAR 30, 2022 20:30:00").getTime();
+ var countDownDate = new Date("MAR 31, 2022 17:00:00").getTime();
         
  // Update the count down every 1 second
  var x = setInterval(function() {
@@ -88,13 +88,13 @@
    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
  
    // Display the result in the element with id="demo"
-   document.getElementById("timer").innerHTML = "R3N4D x XDI_A 200$ DUOS CUP OPENS | POWERED BY ACCXME | STARTING IN " + days + "d " + hours + "h "
+   document.getElementById("timer").innerHTML = "R3N4D x XDI_A 200$ DUOS CUP FINALS | POWERED BY ACCXME | STARTING IN " + days + "d " + hours + "h "
    + minutes + "m " + seconds + "s ";
  
    // If the count down is finished, write some text
    if (distance < 0) {
      clearInterval(x);
-     document.getElementById("timer").innerHTML = "R3N4D x XDI_A 200$ DUOS CUP OPENS | POWERED BY ACCXME | SCORINGS ARE SYNCED WITH WARLEGEND" ;
+     document.getElementById("timer").innerHTML = "R3N4D x XDI_A 200$ DUOS CUP FINALS | POWERED BY ACCXME | SCORINGS ARE SYNCED WITH WARLEGEND" ;
    }
  }, 1000);
  function tableSearch() {
