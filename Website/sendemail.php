@@ -19,16 +19,17 @@ if ( $senderName && $senderEmail && $message) {
   $success = mail( $recipient, $headers, $msgBody );
 
   //Set Location After Successsfull Submission
-  header('Location: contact.html?message=Successfull');
+ 
 echo '<script>alert("email sent successfully \nplease wait for our response to the email you provided ")</script>'; 
+
 
 }
 
 else{
 	//Set Location After Unsuccesssfull Submission
-  	header('Location: contact.html?message=Failed');
+  	
 echo '<script>alert("cannot send this message")</script>'; 
 	
 }
-
+echo "<h3>if you aren't redirected <a href='https://accxme.com/'>press here</a></h3> "
 ?>
