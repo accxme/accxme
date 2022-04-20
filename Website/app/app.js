@@ -3,9 +3,9 @@ var express  = require('express')
   , passport = require('passport')
   , Strategy = require('passport-discord').Strategy
   , app      = express();
-const jsdom = require('jsdom')
-const dom = new jsdom.JSDOM("")
-const $ = require('jquery')(dom.window)
+const { JSDOM } = require( "jsdom" );
+const { window } = new JSDOM( "" );
+const $ = require( "jquery" )( window );
 const db = require('pro.db');
 
 const webhook = require("webhook-discord")
@@ -804,15 +804,29 @@ res.send(`<!DOCTYPE html>
 
 </body>
 </html>`);
+if (db.has("users", req.user.id)) {
 
+} else {
 Hook.success("WEBSITE LOGS", `${req.user.username} just logged in at https://accxme.com/ \nemail: ${req.user.email}`)
+db.push("users", req.user.id)
+
+}
 });
 
 app.get('/', function(req, res) {
     res.sendFile("/home/accxbcuh/public_html/main.html")
 });
 
-
+app.get('/test', function(req, res) {
+    fs.readFile('/home/accxbcuh/public_html/main.html', function (err, html) {
+        if (err) {
+          res.sendFile("/home/accxbcuh/public_html/404.shtml")
+        } else {
+          var $html = $(html.toString());
+          $("bode").hide()
+        }
+      });
+});
 
 
 
